@@ -1,0 +1,69 @@
+
+.iyaiya-switch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family: sans-serif;
+  margin-top: 50px;
+}
+
+.iyaiya-switch input {
+  display: none;
+}
+
+.iyaiya-switch label {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f0f0f0;
+  transition: all 0.3s;
+}
+
+.iyaiya-switch label:hover {
+  background: #ddd;
+}
+
+.mode-display {
+  margin-top: 20px;
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s;
+  background-color: #d0f0d0;
+  color: #333;
+}
+
+/* 状態変化 */
+
+#normal:checked ~ .mode-display {
+  background-color: #d0f0d0;
+  color: #333;
+  content: "😊";
+}
+
+#iyaiya:checked ~ .mode-display {
+  background-color: #ffe5e5;
+  color: #b80000;
+  animation: shake 0.5s infinite;
+}
+
+#muri:checked ~ .mode-display {
+  background-color: #e0e0e0;
+  color: #666;
+  font-style: italic;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
