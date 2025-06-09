@@ -25,38 +25,42 @@
   background: #ddd;
 }
 
-.mode-display {
+.mode-display,
+.tip {
+  display: none;
   margin-top: 20px;
-  width: 200px;
-  height: 100px;
+  width: 80%;
+  max-width: 400px;
+  padding: 16px;
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
+  text-align: center;
   transition: all 0.3s;
-  background-color: #d0f0d0;
-  color: #333;
 }
 
-/* 状態変化 */
-
-#normal:checked ~ .mode-display {
-  background-color: #d0f0d0;
-  color: #333;
-  content: "😊";
+#normal:checked ~ .normal-display,
+#iyaiya:checked ~ .iyaiya-display,
+#superiyaiya:checked ~ .superiyaiya-display {
+  display: block;
 }
 
-#iyaiya:checked ~ .mode-display {
+/* モード別スタイル */
+.normal-display {
+  background-color: #e0f7e9;
+  color: #2e7d32;
+  font-size: 1.4rem;
+}
+
+.iyaiya-display {
   background-color: #ffe5e5;
-  color: #b80000;
+  color: #c62828;
+  font-size: 1.4rem;
   animation: shake 0.5s infinite;
 }
 
-#muri:checked ~ .mode-display {
-  background-color: #e0e0e0;
-  color: #666;
+.superiyaiya-display {
+  background-color: #eeeeee;
+  color: #555;
+  font-size: 1.4rem;
   font-style: italic;
 }
 
@@ -66,4 +70,18 @@
   50% { transform: translateX(5px); }
   75% { transform: translateX(-5px); }
   100% { transform: translateX(0); }
+}
+
+/* 対策表示 */
+.tip {
+  font-size: 0.95rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+#normal:checked ~ .normal-tip,
+#iyaiya:checked ~ .iyaiya-tip,
+#superiyaiya:checked ~ .superiyaiya-tip {
+  display: block;
 }

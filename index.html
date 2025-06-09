@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,15 +9,23 @@
 <body>
   <div class="iyaiya-switch">
     <input type="radio" name="mode" id="normal" checked>
-    <label for="normal">通常モード</label>
+    <label for="normal">😊 通常モード</label>
 
     <input type="radio" name="mode" id="iyaiya">
-    <label for="iyaiya">イヤイヤモード</label>
+    <label for="iyaiya">😤 イヤイヤモード</label>
 
-    <input type="radio" name="mode" id="muri">
-    <label for="muri">もう無理😇</label>
+    <input type="radio" name="mode" id="superiyaiya">
+    <label for="superiyaiya">😭 超イヤモード</label>
 
-    <div class="mode-display">😊</div>
+    <!-- モード表示 -->
+    <div class="mode-display normal-display">😊 ごきげん♪</div>
+    <div class="mode-display iyaiya-display">😤 ぶすーっ！</div>
+    <div class="mode-display superiyaiya-display">😭 もう限界…</div>
+
+    <!-- 対策表示 -->
+    <div class="tip normal-tip">✅ 声かけやアイコンタクトでOK。環境を整えて継続！</div>
+    <div class="tip iyaiya-tip">✅ 選択肢を与えて気をそらす／「そうなんだね」と共感フレーズ</div>
+    <div class="tip superiyaiya-tip">✅ 抱っこして落ち着かせる／そっとして距離を取るのも◎</div>
   </div>
 </body>
 </html>
